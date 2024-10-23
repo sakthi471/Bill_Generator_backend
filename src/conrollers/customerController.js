@@ -3,7 +3,7 @@ const Customer = require("../models/customer");
 
 module.exports.getCustomers = async (req, res) => { 
     try {
-        const customers = await Customer.find();  // Retrieve all customers from the database
+        const customers = await Customer.find(); 
         res.status(200).json(customers);
       } catch (error) {
         res.status(500).json({ error: 'Error fetching customers' });

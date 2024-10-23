@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
 
 
+
+const DB_STRING=""
+
 const connectDB = async () => {
     try {
-        await mongoose.connect("mongodb://localhost:27017/bill");
+        await mongoose.connect(DB_STRING);
         
     } catch (err) {
         console.error(err.message);
